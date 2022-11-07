@@ -87,7 +87,7 @@ def setting(request):
     data1 = {"x": 5}
     return render(request, "site2.html", context=data1)
 
-def cicles(request):
+def cycles(request):
     cats = ["murzik", "vasya", "kitty", "murka"]
     return render(request, "site2.html", context={"cats": cats})
 

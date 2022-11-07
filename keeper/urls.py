@@ -46,5 +46,5 @@ urlpatterns = [
     path('options/', views.options),
     path('setting', views.setting),
     path("", views.main),
-    path('cicles', views.cicles)
+    path('cycles', views.cycles)
 ]
