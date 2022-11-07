@@ -7,3 +7,6 @@ WORKDIR /usr/src/keeper
 COPY requirements.txt /usr/src/keeper/
 RUN pip install -r requirements.txt /usr/src/keeper/
 COPY . /usr/src/keeper/
+
+EXPOSE 8080
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8080"]
