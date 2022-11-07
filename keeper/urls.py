@@ -44,6 +44,7 @@ urlpatterns = [
     path("data", views.data),
 
     path('options/', views.options),
-    path("settings/", views.settings),
-    path("", views.main)
+    path('setting', views.setting),
+    path("", views.main),
+    path('cicles', views.cicles)
 ]

@@ -83,5 +83,12 @@ def options(request):
     data = {"header": header, "langs": langs, "bio": bio, "adress": adress, "person": Person("Tom")}  #Данные для шаблона HTML(в кавычках обращение к переменной внутри html)
     return render(request, "example_site.html", context=data)
     
-def settings(request):
-    return HttpResponsePermanentRedirect("/")
+def setting(request):
+    data1 = {"x": 5}
+    return render(request, "site2.html", context=data1)
+
+def cicles(request):
+    cats = ["murzik", "vasya", "kitty"]
+    return render(request, "site2.html", context={"cats": cats})
+
+    

@@ -1,0 +1,30 @@
+<html>
+<head>
+   <meta charset="utf-8">
+    <title>site2</title>
+</head>
+<body>
+<h1>Проверка Autoescape</h1>
+<p>Вот такая функция:</p>
+<p>def setting(request):
+    data1 = {"x": 5}
+    return render(request, "site2.html", context=data1)</p>
+{%if x > 0 %}
+<p>положительное</p>
+{%elif x < 0 %}
+<p>отрицательное</p>
+{%else%}
+<p>нуль</p>
+{%endif%}
+
+<h2>Демонстрация работы цикла for внутри хтмл</h2>
+{% for lan in cats %}
+<li> {{lan}} </li>
+{% endfor %}
+
+<p>{% now "Y" %}</p>
+<p>{% now "F j Y" %}</p>
+<p>{% now "N, j, Y" %}</p>
+<p>{% now "N j, Y, P" %}</p>
+</body>
+</html>
