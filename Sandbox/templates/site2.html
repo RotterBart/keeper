@@ -25,10 +25,11 @@
 {% for lan in cats %}
 <li> {{lan}} </li>
 {% endfor %}
-
+{%block content%}
 <p>{% now "Y" %}</p>
 <p>{% now "F j Y" %}</p>
 <p>{% now "N, j, Y" %}</p>
 <p>{% now "N j, Y, P" %}</p>
+{%endblock content%}
 </body>
 </html>

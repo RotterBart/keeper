@@ -70,8 +70,8 @@ def workplace(request, id):
     return HttpResponse(f"workplace: {id}")  
 
 def main(request):
-    return HttpResponse("""<H2>Главная</H2>
-    <p>проект на джанго развернутый локально и выброшенный в интернеты</p>""")
+    return render(request, "main.html") #Представление на основе базового шаблона
+
 #редирект временный и постоянный
 def options(request):
     header = ("Данные субъекта")
