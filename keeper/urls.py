@@ -17,10 +17,12 @@ from turtle import home
 from django.contrib import admin
 from django.urls import path, re_path, include
 from Sandbox import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
 contact_patterns = [
     
     path("", views.vlozh),
@@ -29,6 +31,8 @@ contact_patterns = [
 ] # сгруппированные маршруты для вложения
 
 urlpatterns = [
+    path('info', TemplateView.as_view(template_name = "info.html", extra_context={"inject": "кал калыч"})), #представление напрямую из шаблона (templates)
+    
     path('set', views.set),
     path('get', views.get),
     path("about/<name>", views.about),
