@@ -16,7 +16,7 @@ Including another URLconf
 from turtle import home
 from django.contrib import admin
 from django.urls import path, re_path, include
-from Sandbox import views
+from Sandbox import views, forms
 from django.views.generic import TemplateView
 
 urlpatterns = [
@@ -25,7 +25,7 @@ urlpatterns = [
 
 contact_patterns = [
     
-    path("", views.vlozh),
+    #path("", views.vlozh),
     path('work', views.work),
     path('workplace', views.workplace)
 ] # сгруппированные маршруты для вложения
@@ -49,6 +49,12 @@ urlpatterns = [
 
     path('options/', views.options),
     path('setting', views.setting),
-    path("", views.main),
-    path('cycles', views.cycles)
+    #path("", views.main),
+    path('cycles', views.cycles),
+
+
+    path('', forms.auth),
+    path('postuser/', forms.postuser)
+
+
 ]
